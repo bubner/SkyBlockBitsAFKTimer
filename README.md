@@ -1,4 +1,5 @@
 # holo's SkyBlockBitsAFKTimer
+**[Download for Windows](https://github.com/holo-lb/SkyBlockBitsAFKTimer/releases/download/v1.0/SkyBlockBitsAFKTimer-win.exe)**<br>
 *A tool to automatically calculate the remaining time left for Bits AFKing in Hypixel SkyBlock, and will automatically shut down the computer once the timer has expired.*
 
 **If your antivirus flags the release file, you may need to whitelist it! As this script calls an OS shutdown command, it can be seen as malware, however, it is not. If you still don't feel safe about the release file being flagged, then feel free to download the source code and simply run/build it yourself!**
