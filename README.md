@@ -11,5 +11,5 @@ timer_in_seconds = (bits_left / (250 * fame_rank_multiplier)) * 1800
 
 Supports both Windows and Unix-like operating systems, and has been compiled into an executable with PyInstaller.
 This tool will finally let you AFK bits on any machine and not have to worry about turning your computer off once done! Leave this script running in the background and go to bed!<br><br>
-*Tool may be at maximum 30 minutes inaccurate, as the tool cannot know when the last time the 30 minute Bits handout was triggered.*<br><br>
+*Tool may be at maximum 30 minutes inaccurate, as the tool cannot know when the last time the 30 minute Bits handout was triggered.<br>This tool also cannot account for the Bits Talisman, as the chances are completely random.*<br><br>
 Program created by [@holo-lb](https://github.com/holo-lb), 2022.
