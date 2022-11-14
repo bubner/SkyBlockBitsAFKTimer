@@ -33,6 +33,6 @@ class OS:
         if self.currentOS is Systems.WINDOWS:
             system("shutdown -s -t 0")
         else:
-            system("sudo shutdown -h now")
+            system("shutdown -h now")
 
 
