@@ -1,9 +1,12 @@
-from colorama import Fore
+from os_mgr import OS
+from os import name
 from math import ceil
-import os
+from colorama import Fore
 from time import sleep
 
 try:
+    sys = OS(name)
+
     multipliers = {
         1: 1.0,
         2: 1.1,
@@ -24,16 +27,15 @@ try:
         17: 2.26
     }
 
+
     def clear():
-        os.system("cls")
+        sys.clear()
         print(Fore.WHITE + "HYPIXEL SKYBLOCK BITS SHUTDOWN AFK TIMER // @holo-lb")
+
 
     def main():
         clear()
-        if os.name != "nt":
-            print(Fore.RED + "This tool is designed for the Windows operating system. Unable to run on this system.")
-            raise KeyboardInterrupt
-        os.system("Title holo's Bits Shutdown Timer")
+        sys.onstart()
         while True:
             try:
                 bitsleft = abs(int(input(Fore.GREEN + "Enter remaining number of bits you need to AFK for: " + Fore.WHITE)))
@@ -78,13 +80,18 @@ try:
             sleep(1)
 
         clear()
-        print(Fore.RED + "Shutdown command running in 10 seconds. CTRL+C to cancel.")
+        t = 10
         try:
-            sleep(10)
+            while t >= 0:
+                print(f"{ Fore.RED }Shutdown command running in { t } seconds. CTRL+C to cancel.")
+                sleep(1)
+                t -= 1
+                clear()
         except KeyboardInterrupt:
             print(Fore.GREEN + "\nShutdown command cancelled." + Fore.RESET)
             exit(0)
-        os.system("shutdown -s")
+        sys.shutdown()
+
 
     if __name__ == "__main__":
         main()
