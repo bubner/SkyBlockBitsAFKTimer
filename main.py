@@ -73,10 +73,20 @@ try:
 
         clear()
         timer = ceil(bitsleft / (250 * multipliers.get(multiplier))) * 1800
+        bitcount = bitsleft
+        interval = bitscurrent =  0
         while timer >= 0:
             timer -= 1
+            interval += 1
+            if interval >= 1800:
+                offset = int((250 * multipliers.get(multiplier)))
+                bitcount -= offset
+                bitscurrent += offset
+                interval = 0
             clear()
             print(f"{ Fore.CYAN }Time remaining to auto-shutdown: { str(timer) } seconds || { format(timer / 60, '.3f') } minutes || { format(timer / 3600, '.3f') } hours.")
+            print(f"{ Fore.GREEN }Bits collected: { bitscurrent }/{ bitsleft }")
+            print(f"Bits remaining: { bitcount }")
             sleep(1)
 
         clear()
