@@ -1,4 +1,4 @@
-# holo's SkyBlockBitsAFKTimer
+# SkyBlockBitsAFKTimer
 
 **[Download for Windows](https://github.com/holo-lb/SkyBlockBitsAFKTimer/releases/download/v1.1/SkyBlockBitsAFKTimerv1.1-win.exe)**<br>
 _A tool to automatically calculate the remaining time left for Bits AFKing in Hypixel SkyBlock, and will automatically shut down the computer once the timer has expired._
@@ -15,4 +15,4 @@ timer_in_seconds = (bits_left / (250 * fame_rank_multiplier)) * 1800
 Supports both Windows and Unix-like operating systems, and has been compiled into an executable with PyInstaller.
 This tool will finally let you AFK bits on any machine and not have to worry about turning your computer off once done! Leave this script running in the background and go to bed!<br><br>
 _Tool may be at maximum 30 minutes inaccurate, as the tool cannot know when the last time the 30 minute Bits handout was triggered.<br>This tool also cannot account for the Bits Talisman, as the chances are completely random._<br><br>
-Program created by [@hololb](https://github.com/hololb), 2022.
+Program created by [@bubner](https://github.com/bubner), 2022.
