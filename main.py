@@ -1,11 +1,33 @@
-from os_mgr import OS
-from os import name
+from os import name, system
 from math import ceil
 from colorama import Fore
 from time import sleep
 
+class OS:
+    def __init__(self):
+        self.on_windows = name == "nt"
+    
+    def on_start(self):
+        if self.on_windows:
+            system("Title SkyBlock Bits Shutdown Timer")
+        else:
+            print(Fore.RED + "Please make sure this script is running as root, otherwise the shutdown command can not run automatically.\nStarting in 5 seconds...")
+            sleep(5)
+    
+    def clear(self):
+        if self.on_windows:
+            system("cls")
+        else:
+            system("clear")
+
+    def shutdown(self):
+        if self.on_windows:
+            system("shutdown -s -t 0")
+        else:
+            system("shutdown -h now")
+
 try:
-    sys = OS(name)
+    sys = OS()
 
     multipliers = {
         1: 1.0,
@@ -30,12 +52,12 @@ try:
 
     def clear():
         sys.clear()
-        print(Fore.WHITE + "HYPIXEL SKYBLOCK BITS SHUTDOWN AFK TIMER // @holo-lb")
+        print(Fore.WHITE + "HYPIXEL SKYBLOCK AFK BITS SHUTDOWN TIMER")
 
 
     def main():
         clear()
-        sys.onstart()
+        sys.on_start()
         while True:
             try:
                 bitsleft = abs(int(input(Fore.GREEN + "Enter remaining number of bits you need to AFK for: " + Fore.WHITE)))
